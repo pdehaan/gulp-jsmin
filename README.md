@@ -1,13 +1,13 @@
-# gulp-cssmin
+# gulp-jsmin
 
-minify css using gulp.
+minify js using gulp.
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/gulp-cssmin)
+Install with [npm](https://npmjs.org/package/gulp-jsmin)
 
 ```
-npm install --save-dev gulp-cssmin
+npm install --save-dev gulp-jsmin
 ```
 
 
@@ -15,11 +15,11 @@ npm install --save-dev gulp-cssmin
 
 ```js
 var gulp = require('gulp');
-var imagemin = require('gulp-cssmin');
+var jsmin = require('gulp-jsmin');
 
 gulp.task('default', function () {
-	gulp.src('src/**/*.css')
-		.pipe(cssmin())
+	gulp.src('src/**/*.js')
+		.pipe(jsmin())
 		.pipe(gulp.dest('dist'));
 });
 ```
@@ -27,15 +27,9 @@ gulp.task('default', function () {
 
 ## API
 
-### cssmin(options)
+### jsmin(options)
 
-See the css-min [options](https://github.com/GoalSmashers/clean-css).
-
-## Inspired by
-
-- https://github.com/sindresorhus/gulp-imagemin
-
-- https://github.com/gruntjs/grunt-contrib-cssmin
+See the js-min [options]()
 
 ## License
 

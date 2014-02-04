@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('graceful-fs');
 var gutil = require('gulp-util');
 var map = require('map-stream');
-var jsmin = require('jsmin-sourcemap');
+var jsmin = require('node-jsmin-sourcemap');
 var filesize = require('filesize');
 var tempWrite = require('temp-write');
 
@@ -39,11 +39,11 @@ module.exports = function (options) {
 					if (err) {
 						return cb(new gutil.PluginError('gulp-jsmin', err));
 					}
+					console.log(file);
 
-					var minimized = jsmin({'code': data, 'src': file.relative, 'dist':file.relative + '.min.js'});
+					//var minimized = jsmin({'code': data, 'src': })
 					gutil.log('gulp-jsmin:', gutil.colors.green('✔ ') + file.relative); 
-					file.contents = new Buffer(minimized.code);
-					
+					//file.contents = new Buffer(minimized);
 					cb(null, file);
 
 				

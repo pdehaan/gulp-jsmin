@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var cssmin = require('./');
+var jsmin = require('./');
 
 gulp.task('default', function () {
-    gulp.src('./sample/**/*.css')
-        .pipe(cssmin())
+    gulp.src('./sample/test.js')
+        .pipe(jsmin())
         .pipe(gulp.dest('./sample/dist'));
 });

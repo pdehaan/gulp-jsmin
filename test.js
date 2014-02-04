@@ -2,13 +2,16 @@
 var fs = require('fs');
 var assert = require('assert');
 var gutil = require('gulp-util');
-var cssmin = require('./index');
+var jsmin = require('./index');
 
-it('should minify css', function (cb) {
-	var stream = cssmin();
+it('should minify js', function (cb) {
+	var stream = jsmin();
+	stream.on('data', function (file) {
+		cb();
+	});
 
 	stream.write(new gutil.File({
-		path: __dirname + '/sample/test.css',
-		contents: fs.readFileSync(__dirname + '/sample/test.css')
+		path: './sample/test.js',
+		contents: fs.readFileSync('./sample/test.js')
 	}));
 });

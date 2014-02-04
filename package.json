@@ -1,7 +1,7 @@
 {
-  "name": "gulp-cssmin",
+  "name": "gulp-jsmin",
   "version": "0.1.0",
-  "description": "minify css using gulp",
+  "description": "minify js using gulp",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -9,7 +9,7 @@
   "keywords": [
     "gulp",
     "min",
-    "css"
+    "js"
   ],
   "dependencies": {
     "gulp-util": "~2.2.0",
@@ -17,7 +17,7 @@
     "filesize": "~2.0.0",
     "temp-write": "~0.1.0",
     "map-stream": "0.0.4",
-    "clean-css": "~2.0.7"
+    "jsmin-sourcemap": "~0.16.0"
   },
   "author": "chilijung",
   "license": "MIT",

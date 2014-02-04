@@ -27,9 +27,11 @@ gulp.task('default', function () {
 
 ## API
 
-### jsmin(options)
+### jsmin()
 
-See the js-min [options]()
+```
+jsmin()
+```
 
 ## License
 

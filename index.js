@@ -8,7 +8,7 @@ var filesize = require('filesize');
 var tempWrite = require('temp-write');
 
 
-module.exports = function (options) {
+module.exports = function () {
 	return map(function (file, cb) {
 		if (file.isNull()) {
 			return cb(null, file);

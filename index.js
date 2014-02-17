@@ -33,8 +33,6 @@ module.exports = function () {
 					return cb(new gutil.PluginError('gulp-jsmin', err));
 				}
 
-				options = options || {};
-
 				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
 					if (err) {
 						return cb(new gutil.PluginError('gulp-jsmin', err));

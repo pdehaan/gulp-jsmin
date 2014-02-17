@@ -7,6 +7,7 @@ var jsmin = require('./index');
 it('should minify js', function (cb) {
 	var stream = jsmin();
 	stream.on('data', function (file) {
+    assert(file.contents.length < fs.statSync(__dirname + '/sample/test.js').size)
 		cb();
 	});
 
